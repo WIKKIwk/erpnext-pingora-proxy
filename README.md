@@ -22,6 +22,11 @@ This proxy is considered production-ready for an environment only after its prod
 
 The gate verifies build health, ERPNext web routing, socket.io routing, response headers, and HTTP load behavior.
 
+Validated environment and results:
+
+- `docs/tested-matrix.md`
+- `docs/production-validation-report.md`
+
 ## Features
 
 - Pingora-based HTTP reverse proxy

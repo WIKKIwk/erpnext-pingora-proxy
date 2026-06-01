@@ -1,6 +1,6 @@
 # ERPNext Pingora Proxy
 
-Experimental Pingora reverse proxy profile for a local or production-style ERPNext/Frappe bench.
+Production-ready candidate Pingora reverse proxy profile for ERPNext/Frappe benches.
 
 This project routes ERPNext traffic like this:
 
@@ -11,6 +11,16 @@ client -> Pingora
 ```
 
 It is intended as a second reverse-proxy option beside the common nginx setup. It is not an official ERPNext, Frappe, Pingora, or Cloudflare project.
+
+## Production Readiness
+
+This proxy is considered production-ready for an environment only after its production gate passes in that same environment:
+
+```bash
+./scripts/production-gate.sh
+```
+
+The gate verifies build health, ERPNext web routing, socket.io routing, response headers, and HTTP load behavior.
 
 ## Features
 
@@ -92,6 +102,6 @@ See `docs/production-gate.md` for load-test knobs and release criteria.
 
 ## Notes
 
-This is experimental. For public production use, add and verify TLS, domain configuration, service supervision, log rotation, firewall rules, and ERPNext production process management.
+For public production use, verify TLS, domain configuration, service supervision, log rotation, firewall rules, and ERPNext production process management in the target environment.
 
 Pingora is an open-source project by Cloudflare. See the Pingora project and its license before adopting this in production.

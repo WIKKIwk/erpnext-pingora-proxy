@@ -26,4 +26,4 @@ Load parameters:
 PINGORA_GATE_REQUESTS=1000 PINGORA_GATE_CONCURRENCY=50 ./scripts/production-gate.sh
 ```
 
-Passing this gate means the proxy is a production-ready candidate for the tested ERPNext bench. It is not a guarantee for every deployment; TLS, firewall, service supervision, log rotation, and real traffic soak testing still need to be validated in the target environment.
+Passing this gate means the proxy is production-ready for the tested ERPNext bench and environment profile. The guarantee is scoped to the tested configuration; TLS, firewall, service supervision, log rotation, and real traffic soak testing still need to be validated in each target environment.

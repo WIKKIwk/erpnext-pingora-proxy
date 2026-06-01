@@ -80,6 +80,16 @@ Health check:
 curl http://127.0.0.1:8088/_pingora_health
 ```
 
+## Production Gate
+
+Run the repeatable production gate:
+
+```bash
+./scripts/production-gate.sh
+```
+
+See `docs/production-gate.md` for load-test knobs and release criteria.
+
 ## Notes
 
 This is experimental. For public production use, add and verify TLS, domain configuration, service supervision, log rotation, firewall rules, and ERPNext production process management.
